@@ -621,20 +621,8 @@ ul li {
     margin: 0 !important;
     position: static !important;
   }
-}
-
-@media (max-width: 500px){
   .kv-wrapper{
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
-  }
-  .top-logo{
-    width: 60px;
-  }
-  .message_fade{
-    font-size: 20%;
+    width: 50%;
   }
 }
 
@@ -667,7 +655,7 @@ h4,
 h5,
 h6,
 body {
-  line-height: 1.35;
+  line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
   color: #666;

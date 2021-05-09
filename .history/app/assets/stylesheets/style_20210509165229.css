@@ -621,21 +621,15 @@ ul li {
     margin: 0 !important;
     position: static !important;
   }
-}
-
-@media (max-width: 500px){
   .kv-wrapper{
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-size: cover;
+    width: 50%;
     height: 300px;
   }
-  .top-logo{
-    width: 60px;
-  }
-  .message_fade{
-    font-size: 20%;
-  }
+.message_fade p{
+  font-size: 0.8rem;
+}
+
 }
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -646,6 +640,11 @@ ul li {
   .row .grid-3,
   .row .grid-4 {
     width: 48.2% !important;
+  }
+  .kv-wrapper{
+    background-size: cover;
+    width: 50%;
+    height: 300px;
   }
 }
 
@@ -667,7 +666,7 @@ h4,
 h5,
 h6,
 body {
-  line-height: 1.35;
+  line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
   color: #666;
