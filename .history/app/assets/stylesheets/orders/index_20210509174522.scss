@@ -1,0 +1,146 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-logo{
+  width: 100px;
+  position: absolute;
+  top:10px;
+  left: 10px;
+  z-index: 11;
+}
+
+.kv-wrapper{
+  width: 85%;
+  height: 100%;
+  min-height: 555px;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: image-url('bg-img.png');
+  animation-name: overLay;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+
+@keyframes overLay {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.message_fade{
+  // position: absolute;
+  // top:240px;
+  // left:150px;
+  padding: 15% 10%;
+  animation-name: fadeIn;
+  animation-timing-function: cubic-bezier(0.1, 0.3, 0.2, 1);
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode:both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 15px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.message_fade p{
+  // font-size: 20px;
+}
+
+
+.item-wrapper{
+  height: 1000px;
+}
+
+.concept{
+  margin: 15%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.concept-text{
+  font-size:22px;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.items{
+  display: flex;
+}
+
+.item-image{
+  width: 30%;
+  padding-right: 20px;
+}
+
+
+.discription {
+  padding: 10px 0 20px;
+}
+
+.cegJMn {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  z-index: 2;
+}
+
+.kRWpNp {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bJmZck {
+  border-radius: 15%;
+  padding-top: 25%;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  background-color: rgb(230, 100, 100);
+}
+
+.imkpqd {
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+}
+
+.iqSQPz {
+  max-width: 100%;
+  max-height: 100%;
+  color: rgb(255, 255, 255);
+  display: block;
+  height: 35px;
+  width: 40px;
+  margin: 5px auto 0px;
+}
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
