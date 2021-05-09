@@ -3,6 +3,7 @@ a{
 }
 
 .header{
+  background-color:rgba(247, 240, 235, 0.3);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

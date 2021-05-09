@@ -624,7 +624,9 @@ ul li {
 }
 
 @media (max-width: 1080px){
-
+  .concept{
+    margin-top: 70px;
+  }
 }
 
 @media (max-width: 500px){
@@ -640,7 +642,9 @@ ul li {
   .message_fade{
     font-size: 20%;
   }
-
+  .concept{
+    margin-top: 100px;
+  }
 }
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -758,7 +762,7 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 header.header {
   padding: 10px;
   border-bottom: 1px solid #D8D8D8;
-  background-color:rgba(247, 240, 235, 0.3);
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
