@@ -3,10 +3,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   devise_scope :user do
-    # post 'addresses', to: 'users/registrations#create'
+    get 'addresses', to: 'users/registrations#new_address'
     post 'addresses', to: 'users/registrations#create_address'
-    # patch 'users', to: 'users/registrations#update'
-    # patch 'addresses', to: 'users/registrations#address_update'
+    patch 'users', to: 'users/registrations#update'
+    patch 'addresses', to: 'users/registrations#address_update'
   end
   root to: 'orders#index'
   get 'orders/new'
