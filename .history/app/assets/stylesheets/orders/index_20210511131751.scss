@@ -11,8 +11,8 @@
 
 .kv-wrapper{
   width: 85%;
-  height: 100vh;
-  // min-height: 555px;
+  height: 100%;
+  min-height: 555px;
   background-size: contain;
   position: absolute;
   right: 0;
@@ -63,7 +63,7 @@
 }
 
 .message_fade p{
-
+  // font-size: 20px;
 }
 
 
