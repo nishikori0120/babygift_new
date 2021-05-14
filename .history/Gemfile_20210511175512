@@ -56,5 +56,5 @@ gem 'devise'
 gem 'pry-rails'
 gem 'jp_prefecture'
 gem 'kaminari'
-gem 'stripe'
+# gem 'stripe'
 

@@ -1,7 +1,7 @@
 <script src="https://js.stripe.com/v3"></script>
 
 <script>
-var stripe = Stripe('pk_test_51Ip5QOL3ZeL8PtetIxPN964RatBy0QJNGNGMbezHiUOjntXH2nR5OZYMJOUv5WYgm6YM1VmiYz6KZIWIWSvaMzB9006nA8tnTM');
+var stripe = Stripe('pk_test_XXXX');
 stripe.redirectToCheckout({
 sessionId: '<%= @session.id %>'
 }).then(function (result) {

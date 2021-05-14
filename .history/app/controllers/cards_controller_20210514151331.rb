@@ -3,11 +3,11 @@ class CardsController < ApplicationController
     @session = Stripe::Checkout::Session.create({
       payment_method_types: ['card'],
       line_items: [{
-        price: 'price_1IquIiL3ZeL8PtetlnduJIRu',
+        price: 'price_XXXX',
         quantity: 1,
       }],
-      mode: 'payment',
-      success_url: request.base_url + '/cards/create?session_id={CHECKOUT_SESSION_ID}',
+      mode: 'subscription',
+      success_url: request.base_url + '/payments/create_subscription?session_id={CHECKOUT_SESSION_ID}',
       cancel_url: request.base_url + '/payments/subscription1',
     })
   end

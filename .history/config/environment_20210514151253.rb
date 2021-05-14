@@ -1,0 +1,6 @@
+# Load the Rails application.
+require_relative 'application'
+
+# Initialize the Rails application.
+Rails.application.initialize!
+STRIPE_TEST_SECRET_KEY =sk_test_51Ip5QOL3ZeL8PtetJ0qj7Me0TMc0rZjL9Fz5AYyzgTSUSi3Wjd6hT4sSxFxV2rV9t1sJiq74a4F4pACMEqXV8bmZ00jdmvCJ6j
