@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    # render '/app/views/cards/new.html.erb'
+    render '/app/views/cards/new.html.erb'
   end
 
   def create
