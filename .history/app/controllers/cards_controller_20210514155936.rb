@@ -3,7 +3,7 @@ class CardsController < ApplicationController
     @session = Stripe::Checkout::Session.create({
       payment_method_types: ['card'],
       line_items: [{
-        price: 'price_1Iqw7FL3ZeL8PtetXp8jRh3T',
+        price: 'price_1IquIiL3ZeL8PtetlnduJIRu',
         quantity: 1,
       }],
       mode: 'payment',
@@ -13,6 +13,6 @@ class CardsController < ApplicationController
   end
 
   def create
-  end
 
+  end
 end
