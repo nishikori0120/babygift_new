@@ -18,22 +18,10 @@ class OrdersController < ApplicationController
     session["user_data"] = {user: current_user.attributes}
   end
 
-  def add_address
-    @new_address = Address.new(address_params)
-    unless @new_address.valid?
-      render :select_address and return
-    end
-    session["address_data"] = {new_address: @new_address.attributes}
-  end
-
   private
 
   def order_params
     params.require(:order).permit(:k_name,:r_name,:birthday,:height).merge(user_id: current_user.id)
-  end
-
-  def address_params
-    params.permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
   end
 
 end

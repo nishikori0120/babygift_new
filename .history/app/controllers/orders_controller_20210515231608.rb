@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
       render :select_address and return
     end
     session["address_data"] = {new_address: @new_address.attributes}
+    r
   end
 
   private
