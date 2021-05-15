@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   root to: 'orders#index'
   resources :orders, only: [:new]
-  post 'orders/select_adress', to: 'orders#create'
+  post 'orders/select_adress', to: ''
   resources :users, only: [:show, :edit]
   resources :cards, only: [:new, :create]
 end

@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     # patch 'addresses', to: 'users/registrations#address_update'
   end
   root to: 'orders#index'
-  resources :orders, only: [:new]
-  post 'orders/select_adress', to: 'orders#create'
+  resources :orders, only: [:new, :create]
   resources :users, only: [:show, :edit]
   resources :cards, only: [:new, :create]
 end

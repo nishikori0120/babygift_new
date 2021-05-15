@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
     end
     session["order_data"] = {order: @order.attributes}
     session["user_data"] = {user: current_user.attributes}
+    redirect_to order_select_address_path
   end
 
   private
