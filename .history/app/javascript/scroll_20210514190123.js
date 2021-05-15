@@ -10,7 +10,7 @@ $(window).on('load scroll', function(){
 $(function() {
   var nav = $('.header');
   //表示位置
-  var navTop = nav.offset().top+600;
+  var navTop = nav.offset().top+200;
   //ナビゲーションの高さ（シャドウの分だけ足してます）
   var navHeight = nav.height()+10;
   var showFlag = false;
@@ -34,23 +34,4 @@ $(function() {
           }
       }
   });
-//   $(window).on('touchmove', function () {
-//       var winTop = $(this).scrollTop();
-//       if (winTop >= navTop) {
-//           if (showFlag == false) {
-//               showFlag = true;
-//               nav
-//                   .addClass('fixed')
-//                   .stop().animate({'top' : '0px'}, 200);
-//           }
-//       } else if (winTop <= navTop) {
-//           if (showFlag) {
-//               showFlag = false;
-//               nav.stop().animate({'top' : -navHeight+'px'}, 200, function(){
-//                   nav.removeClass('fixed');
-//               });
-//           }
-//       }
-//   });
-
 });
