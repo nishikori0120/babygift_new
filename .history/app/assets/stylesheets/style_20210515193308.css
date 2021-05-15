@@ -628,8 +628,7 @@ ul li {
 }
 
 @media (max-width: 500px){
-
-  .kv{
+  .kv-wrapper{
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
