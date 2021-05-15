@@ -10,11 +10,12 @@
 }
 
 .kv-wrapper{
-  height: 688px;
+  // height: 700px;
 }
 
 .kv{
-  width: 100%;
+  // width: 85%;
+  height: 100%;
   // min-height: 555px;
   background-size: cover;
   // position: absolute;
@@ -43,8 +44,10 @@
 }
 
 .message_fade{
-  position: absolute;
-  // padding: 15% 10%;
+  // position: absolute;
+  // top:240px;
+  // left:150px;
+  padding: 15% 10%;
   animation-name: fadeIn;
   animation-timing-function: cubic-bezier(0.1, 0.3, 0.2, 1);
   animation-duration: 1s;
@@ -70,11 +73,11 @@
 
 
 .item-wrapper{
-  height: 600px;
-  padding:100px 0;
+  height: 1000px;
 }
 
 .concept{
+  margin: 15%;
   text-align: center;
   margin-bottom: 100px;
 }
