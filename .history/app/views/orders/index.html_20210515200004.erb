@@ -1,21 +1,21 @@
-  <header class="header">
+  <%#<header class="header">
     <div class="top-left">
       <a class="top-logo-area" href="/">
         <%= image_tag 'top-logo.png', class:"top-logo" %>
-      </a>
+      <%#</a>
     </div>
     <div class="top-right">
     <% if user_signed_in? %>
-      <%= link_to "コンセプト", '#', class: "login" %>
-      <%= link_to "#{@user.first_name}"'さんのマイページ', user_path(current_user.id), class: "login" %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %>
-    <% else %>
-      <%= link_to "コンセプト", '/', class: "login" %>
-      <%= link_to "ログイン", new_user_session_path, class: "login" %>
-      <%= link_to "はじめての注文はこちら", new_user_registration_path, class: "sign-up" %>
-    <% end %>
-    </div>
-  </header>
+      <%# <%= link_to "コンセプト", '#', class: "login" %>
+      <%# <%= link_to "#{@user.first_name}"'さんのマイページ', user_path(current_user.id), class: "login" %>
+      <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %>
+    <%# <% else %>
+      <%# <%= link_to "コンセプト", '/', class: "login" %>
+      <%# <%= link_to "ログイン", new_user_session_path, class: "login" %>
+      <%# <%= link_to "はじめての注文はこちら", new_user_registration_path, class: "sign-up" %>
+    <%# <% end %>
+    <%# </div> %>
+  <%# </header> %>
   <!-- /.header -->
 
   <main class="main">
