@@ -1,3 +1,5 @@
+<%= render 'shared/second_header' %>
+
 <div class="comfimation">
   <div class="container">
     <p class="title">
@@ -48,15 +50,15 @@
       </div>
     </div>
 
-       <%# <div class="btn next"> %>
-        <%= link_to cards_new_path do %>
+       <div class="btn next">
+        <%= link_to  order_order_end_path, method: :post do %>
         <div class="sc-eTpRJs cegJMn-second">
         <div class="sc-iuJeZd bJmZck-second">
-          <div class="sc-esOvli imkpqd-second">支払いへ進む<br></div>
+          <div class="sc-esOvli imkpqd-second">注文確定<br></div>
         </div>
     <% end %>
     </div>
   </div>
-<%# </div> %>
+</div>
 
 </div>

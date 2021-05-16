@@ -32,6 +32,7 @@ class OrdersController < ApplicationController
     @new_address = Address.new(session["address_data"]["new_address"])
     end
     @order = Order.new(session["order_data"]["order"])
+    redirect_to cards_new_path
   end
 
   private
