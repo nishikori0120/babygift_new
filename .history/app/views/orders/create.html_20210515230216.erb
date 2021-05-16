@@ -19,7 +19,7 @@
     </div>
 
     <div class="address_form hidden" id="address_form" >
-      <%= form_with model: @new_address, url:  orders_comfimation_path, id: "form", local: true do |f| %>
+      <%= form_with model: @new_address, url: order_add_address_path, id: "form", local: true do |f| %>
 
       <div class="field">
         <%= f.label :お名前 %><br />
@@ -70,7 +70,7 @@
     </div>
 
     <div class="btn next" id="next">
-      <%= link_to '次へ進む', orders_comfimation_path %>
+      <%= link_to '次へ進む', order_comfimation_path %>
     </div>
   </div>
 </div>

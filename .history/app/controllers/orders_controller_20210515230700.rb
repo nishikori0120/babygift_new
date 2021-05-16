@@ -24,24 +24,13 @@ class OrdersController < ApplicationController
       render :select_address and return
     end
     session["address_data"] = {new_address: @new_address.attributes}
-  end
-
-  def comfimation
-    @address = current_user.address
-    if session["address_data"].present?
-    @new_address = Address.new(session["address_data"]["new_address"])
-    end
-    @order = Order.new(session["order_data"]["order"])
+    redirect_to order_comfimation_path
   end
 
   private
 
   def order_params
     params.require(:order).permit(:k_name,:r_name,:birthday,:height).merge(user_id: current_user.id)
-  end
-
-  def address_params
-    params.permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
   end
 
 end

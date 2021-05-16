@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   root to: 'orders#index'
   resources :orders, only: [:new]
   post 'orders/select_adress', to: 'orders#create'
-  post 'orders/comfimation', to: 'orders#add_address'
-  get 'orders/comfimation', to: 'orders#comfimation'
   resources :users, only: [:show, :edit]
   resources :cards, only: [:new, :create]
 end

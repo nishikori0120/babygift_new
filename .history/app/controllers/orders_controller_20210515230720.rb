@@ -26,14 +26,6 @@ class OrdersController < ApplicationController
     session["address_data"] = {new_address: @new_address.attributes}
   end
 
-  def comfimation
-    @address = current_user.address
-    if session["address_data"].present?
-    @new_address = Address.new(session["address_data"]["new_address"])
-    end
-    @order = Order.new(session["order_data"]["order"])
-  end
-
   private
 
   def order_params

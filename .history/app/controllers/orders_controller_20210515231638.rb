@@ -24,14 +24,7 @@ class OrdersController < ApplicationController
       render :select_address and return
     end
     session["address_data"] = {new_address: @new_address.attributes}
-  end
-
-  def comfimation
-    @address = current_user.address
-    if session["address_data"].present?
-    @new_address = Address.new(session["address_data"]["new_address"])
-    end
-    @order = Order.new(session["order_data"]["order"])
+    redirect_to orders_comfimation_path
   end
 
   private
