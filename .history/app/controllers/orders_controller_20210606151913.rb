@@ -8,27 +8,23 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @user = User.find(current_user.id)
+    @address = @user.address
     @order = Order.new(order_params)
     unless @order.valid?
       render :new and return
     end
     session["order_data"] = {order: @order.attributes}
     session["user_data"] = {user: current_user.attributes}
-    redirect_to orders_select_address_path
-  end
-
-  def select_address
-    @user = User.find(current_user.id)
-    @address = @user.address
+    redirect_to order_select_address_path
   end
 
   def add_address
-    @address = Address.new(address_params)
-    unless @address.valid?
+    @new_address = Address.new(address_params)
+    unless @new_address.valid?
       render :select_address and return
     end
-    session["address_data"] = {new_address: @address.attributes}
-    redirect_to orders_comfimation_path
+    session["address_data"] = {new_address: @new_address.attributes}
   end
 
   def comfimation
@@ -46,7 +42,7 @@ class OrdersController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
+    params.permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
   end
 
 end

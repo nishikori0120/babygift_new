@@ -15,9 +15,14 @@ li {
   margin-bottom: 40px;
 }
 
-.baby-text{
-  text-align: center;
-}
+/* .title-border::after{
+  content: "";
+  display: block;
+  width:50%;
+  height:1px;
+  background-color:khaki;
+  margin: 5px auto;
+} */
 
 .baby-form-aria{
   width: 100vw;
@@ -26,8 +31,8 @@ li {
 }
 
 .baby-form{
-  width:25%;
-  margin: 0 auto;
+  align-items: center;
+  width:50%;
   text-align: center;
   padding-bottom: 50px;
 }

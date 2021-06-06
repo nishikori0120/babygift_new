@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
       render :select_address and return
     end
     session["address_data"] = {new_address: @address.attributes}
-    redirect_to orders_comfimation_path
+    # redirect_to order_comfimation_path
   end
 
   def comfimation

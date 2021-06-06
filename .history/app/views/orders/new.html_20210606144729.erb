@@ -1,10 +1,8 @@
-<%= render 'shared/header' %>
-
 <div class="baby-form-aria">
   <p class="title baby-text">赤ちゃんのことを教えてください</p>
   <div class="baby-form">
     <div class="baby-data">
-      <%= form_with(model: @order, url: orders_path, local: true) do |f| %>
+      <%= form_with(model: @order, url: orders_select_adress_path, local: true) do |f| %>
       <%= render "devise/shared/error_messages", resource: @order %>
 
       <div class="field">

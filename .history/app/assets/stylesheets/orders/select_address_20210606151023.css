@@ -25,6 +25,7 @@
 .add_address:hover{
   cursor: pointer;
   color:cadetblue;
+  font-weight: bold;
 
 }
 

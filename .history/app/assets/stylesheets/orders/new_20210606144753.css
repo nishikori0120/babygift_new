@@ -15,13 +15,19 @@ li {
   margin-bottom: 40px;
 }
 
-.baby-text{
-  text-align: center;
-}
+/* .title-border::after{
+  content: "";
+  display: block;
+  width:50%;
+  height:1px;
+  background-color:khaki;
+  margin: 5px auto;
+} */
 
 .baby-form-aria{
   width: 100vw;
   height: 100%;
+  margin: 0 auto;
   /* background-color:rgba(240,230,220,0.3); */
 }
 
