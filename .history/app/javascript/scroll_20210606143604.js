@@ -4,4 +4,5 @@ $(window).on('load scroll', function(){
    } else {
     $('.cegJMn').fadeOut(300);
    }
+
 });
