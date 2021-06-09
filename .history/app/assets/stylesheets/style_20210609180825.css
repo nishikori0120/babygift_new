@@ -658,10 +658,8 @@ ul li {
   .item-image{
     width: 50%;
     height: 180px;
-    border-radius: 10%;
-    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
   }
-
   .item-wrapper{
     width: 400px;
     margin: 0 auto;

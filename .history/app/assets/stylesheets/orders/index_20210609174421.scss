@@ -70,9 +70,9 @@
 
 
 .item-wrapper{
-  width:780px;
+  width:980px;
   height: 600px;
-  padding:80px 0;
+  padding:100px 0;
   margin: 0 auto;
 }
 
@@ -91,21 +91,17 @@
 
 .items{
   display: flex;
-  margin: 0 auto;
 }
 
 .item-image{
   width: 30%;
-  margin-right: 20px;
-  // position: relative;
+  padding-right: 20px;
 }
 
 
 
 .discription {
-  width:350px;
-  padding: 20px 0;
-  margin: 0 auto;;
+  padding: 10px 0 20px;
 }
 
 .cegJMn {

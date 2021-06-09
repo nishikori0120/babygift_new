@@ -658,10 +658,7 @@ ul li {
   .item-image{
     width: 50%;
     height: 180px;
-    border-radius: 10%;
-    overflow: hidden;
   }
-
   .item-wrapper{
     width: 400px;
     margin: 0 auto;
@@ -669,14 +666,13 @@ ul li {
   }
 
   .left{
-    /* top:20px;
-    left:30px; */
+    /* left:40px; */
     /* z-index: 2; */
   }
 
   .right{
-    /* top:40px; */
-    /* left:0px; */
+    top:140px;
+    /* left:140px; */
   }
   .concept-text{
     font-size: 18px;

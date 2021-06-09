@@ -659,9 +659,7 @@ ul li {
     width: 50%;
     height: 180px;
     border-radius: 10%;
-    overflow: hidden;
   }
-
   .item-wrapper{
     width: 400px;
     margin: 0 auto;
