@@ -1,6 +1,6 @@
 <div class="contents row">
   <div class="container">
-    <p class="title">ご注文者情報の入力</p>
+    <h2>ご注文者情報の登録</h2>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
 
@@ -22,7 +22,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :電話番号 %><i>　※ハイフン不要</i><br />
+      <%= f.label :電話番号 %><i>（ハイフン不要）</i><br />
       <%= f.text_field :tel %>
     </div>
 
@@ -30,7 +30,7 @@
       <div class="field">
         <%= f.label :"パスワード" %>
         <% if @minimum_password_length %>
-          <em>※<%= @minimum_password_length %>文字以上</em>
+          <em>※<%= @minimum_password_length %>文字以上)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "new-password" %>
       </div>

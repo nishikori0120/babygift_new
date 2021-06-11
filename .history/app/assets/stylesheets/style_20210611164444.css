@@ -1072,7 +1072,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: rgba(199, 111, 28, 0.8);
+  background-color:;
 }
 
 .container {

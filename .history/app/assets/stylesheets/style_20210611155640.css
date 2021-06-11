@@ -634,20 +634,19 @@ ul li {
 
   .discription{
     width:780px;
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .item-image{
-    /* position: relative; */
-    border-radius: 4%;
-    box-shadow: 12px 8px 10px 4px rgba(179, 135, 16, 0.2);
+    position: relative;
   }
 
   .left{
-
+    top:-30px;
   }
 
   .right{
+    top:-50px;
   }
 }
 
@@ -675,7 +674,6 @@ ul li {
   .item-image{
     width: 45%;
     height: 180px;
-    border-radius: 10%;
   }
 
   .item-wrapper{
@@ -684,6 +682,16 @@ ul li {
     padding:50px 0px;
   }
 
+  .left{
+    /* top:20px;
+    left:30px; */
+    /* z-index: 2; */
+  }
+
+  .right{
+    /* top:40px; */
+    /* left:0px; */
+  }
   .concept-text{
     font-size: 18px;
   }
@@ -1064,7 +1072,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: burlywood;
+  background-color: #57C3E9;
   border-radius: 20px;
   color: #fff;
   border: 0;
@@ -1072,7 +1080,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: rgba(199, 111, 28, 0.8);
+  background-color: #84d3ef;
 }
 
 .container {

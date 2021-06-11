@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
       @order = Order.new
     else
       redirect_to new_user_registration_path
-    end
   end
 
   def create

@@ -5,10 +5,7 @@ class OrdersController < ApplicationController
 
   def new
     if user_signed_in?
-      @order = Order.new
-    else
-      redirect_to new_user_registration_path
-    end
+    @order = Order.new
   end
 
   def create
