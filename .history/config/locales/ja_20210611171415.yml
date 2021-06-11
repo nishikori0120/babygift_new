@@ -9,6 +9,4 @@ ja:
        tel: 電話番号
      address:
        postcode: 郵便番号
-       prefecture: 都道府県
-       city: 市町村
-       street: 番地
+       : 画像

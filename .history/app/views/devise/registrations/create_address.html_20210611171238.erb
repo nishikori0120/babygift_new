@@ -1,8 +1,10 @@
+<%= render 'shared/header' %>
+
 <div class="contents row">
   <div class="container">
-    <h2>住所登録</h2>
-    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= devise_error_messages! %>
+    <p class="title">注文者情報の入力</p>
+    <%= form_with model: @address, url: addresses_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= render 'layouts/error', model: f.object %>
 
     <div class="field">
       <%= f.label :postcode, '郵便番号' %><br />
@@ -31,7 +33,7 @@
 
 
       <div class="actions">
-        <%= f.submit "住所登録へ進む" %>
+        <%= f.submit "登録する" %>
       </div>
     <% end %>
   </div>
