@@ -56,4 +56,4 @@ gem 'devise'
 gem 'pry-rails'
 gem 'jp_prefecture'
 gem 'stripe'
-
+gem 'rails-i18n'
