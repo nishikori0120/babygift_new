@@ -33,7 +33,7 @@
 }
 
 .actions{
-  width: 300px;
+  /* width: 300px; */
 }
 
 .sub_title{
@@ -59,6 +59,10 @@
 
 .address{
   width:100%;
+}
+
+.actions{
+
 }
 
 a.btn--orange {

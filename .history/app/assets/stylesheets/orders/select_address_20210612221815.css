@@ -61,6 +61,17 @@
   width:100%;
 }
 
+.actions{
+  background-color: burlywood;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+}
+
 a.btn--orange {
   color: #fff;
   background-color:burlywood;

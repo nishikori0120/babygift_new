@@ -33,7 +33,7 @@
 }
 
 .actions{
-  width: 300px;
+  /* width: 300px; */
 }
 
 .sub_title{
@@ -59,6 +59,18 @@
 
 .address{
   width:100%;
+}
+
+.actions{
+  background-color: burlywood;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
 }
 
 a.btn--orange {
