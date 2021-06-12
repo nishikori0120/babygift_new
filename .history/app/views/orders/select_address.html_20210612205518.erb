@@ -3,6 +3,7 @@
 
     <p class="title">配送先の選択</p>
     <div class="select_address" id="select_address">
+    <div class="container">
       <p class="sub_title">選択中の配送先</p>
       <div class="address_list">
         <ul>
@@ -70,6 +71,8 @@
       <% end %>
     </div>
 
-    <a href="/orders/comfimation" class="btn btn--orange btn--circle btn--circle-a btn--shadow">次へ進む</a>
-
+    <div class="actions">
+      <%= link_to '次へ進む', orders_comfimation_path %>
+    </div>
+  </div>
 </div>

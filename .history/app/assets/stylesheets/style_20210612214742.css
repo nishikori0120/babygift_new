@@ -639,16 +639,21 @@ ul li {
   }
 
   .item-image{
+    /* position: relative; */
     border-radius: 4%;
     box-shadow: 12px 8px 10px 4px rgba(179, 135, 16, 0.2);
   }
 
-  .comfimation{
-    margin: 0 auto;
-    width: 750px;
+  .left{
+
+  }
+
+  .right{
   }
 
   .container{
+    width: 750px;
+    margin: 0 auto;
   }
 
 }

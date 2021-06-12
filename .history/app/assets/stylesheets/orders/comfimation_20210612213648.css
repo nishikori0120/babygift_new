@@ -20,8 +20,8 @@
 
 .cegJMn-second {
   position: fixed;
-  right: 50px;
-  bottom: 70px;
+  right: 100px;
+  bottom: 50px;
   text-align: center;
   z-index: 2;
 }

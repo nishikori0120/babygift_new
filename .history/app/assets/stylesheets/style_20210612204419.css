@@ -268,8 +268,7 @@ select {
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.actions {
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -639,18 +638,17 @@ ul li {
   }
 
   .item-image{
+    /* position: relative; */
     border-radius: 4%;
     box-shadow: 12px 8px 10px 4px rgba(179, 135, 16, 0.2);
   }
 
-  .comfimation{
-    margin: 0 auto;
-    width: 750px;
+  .left{
+
   }
 
-  .container{
+  .right{
   }
-
 }
 
 @media screen and (max-width:500px) {
@@ -760,8 +758,7 @@ div.contents.row div.content_post p {
 
 .transition,
 a,
-form input[type="submit"],
-.actions {
+form input[type="submit"] {
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -780,7 +777,7 @@ form input[type="submit"],
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  /* border: 2px solid #57C3E9; */
+  border: 2px solid #57C3E9;
   color: #57C3E9;
   font-weight: bold;
   text-align: center;
@@ -796,7 +793,6 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 
 .title {
   font-weight: bold;
-
 }
 
 .title--big {
@@ -1076,12 +1072,12 @@ form input[type="submit"],
   font-size: 18px;
 }
 
-form input[type="submit"],
-.actions:hover {
+form input[type="submit"]:hover {
   background-color: rgba(199, 111, 28, 0.8);
 }
 
 .container {
+  max-width: 1024px;
   margin: 20px 0;
   padding: 30px;
   box-shadow: 0 0 0px rgba(41, 41, 41, 0.2);

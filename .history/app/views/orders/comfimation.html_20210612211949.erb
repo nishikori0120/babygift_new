@@ -10,7 +10,7 @@
       <p class="sub_title">
         ご注文内容
       </p>
-        <ul class="order_list">
+        <ul>
           <li><%= @order.k_name %>(<%= @order.r_name %>)ちゃん<br></li>
 
           <li><%= @order.birthday %>生まれ<br></li>
@@ -23,7 +23,7 @@
         配送先
       </p>
         <% if @new_address.blank? %>
-        <ul class="order_list">
+        <ul>
           <li class="name"><%= current_user.first_name %><%= current_user.last_name %><br /></li>
           <li class="postcode">〒<%= @address.postcode %><br /></li>
           <li class="address"><%= @address.prefecture_name %><%= @address.city%><br /></li>
@@ -31,7 +31,7 @@
           <li><%= @address.building %></li>
         </ul>
         <% elsif @new_address.postcode.present? %>
-        <ul class="order_list">
+        <ul>
           <li class="name"><%= @new_address.first_name %><%= @new_address.last_name %><br /></li>
           <li class="postcode">〒<%= @new_address.postcode %><br /></li>
           <li class="address"><%= @new_address.prefecture_name %><%= @new_address.city%><br /></li>
@@ -39,7 +39,7 @@
           <li><%= @new_address.building %></li>
         </ul>
         <% else %>
-      <ul class="order_list">
+      <ul>
           <li class="name"><%= current_user.first_name %><%= current_user.last_name %><br /></li>
           <li class="postcode">〒<%= @address.postcode %><br /></li>
           <li class="address"><%= @address.prefecture_name %><%= @address.city%><br /></li>

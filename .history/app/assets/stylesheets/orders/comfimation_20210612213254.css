@@ -5,23 +5,18 @@
 }
 
 .order_data{
-  margin-top: 20px;
   /* display: flex; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .order_baby{
   margin-bottom: 30px;
 }
 
-.order_list{
-  padding-left: 12px;
-}
-
 .cegJMn-second {
   position: fixed;
-  right: 50px;
-  bottom: 70px;
+  right: 100px;
+  bottom: 50px;
   text-align: center;
   z-index: 2;
 }

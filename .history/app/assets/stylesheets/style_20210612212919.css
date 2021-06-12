@@ -639,18 +639,17 @@ ul li {
   }
 
   .item-image{
+    /* position: relative; */
     border-radius: 4%;
     box-shadow: 12px 8px 10px 4px rgba(179, 135, 16, 0.2);
   }
 
-  .comfimation{
-    margin: 0 auto;
-    width: 750px;
+  .left{
+
   }
 
-  .container{
+  .right{
   }
-
 }
 
 @media screen and (max-width:500px) {
@@ -796,7 +795,9 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 
 .title {
   font-weight: bold;
-
+  padding: 1rem 2rem;
+  border-left: 3px solid #000;
+  /* background: #f4f4f4; */
 }
 
 .title--big {
@@ -1082,6 +1083,7 @@ form input[type="submit"],
 }
 
 .container {
+  max-width: 1024px;
   margin: 20px 0;
   padding: 30px;
   box-shadow: 0 0 0px rgba(41, 41, 41, 0.2);

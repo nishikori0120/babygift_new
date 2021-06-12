@@ -75,24 +75,23 @@
 
 a.btn--orange {
   color: #fff;
-  background-color:burlywood;
+  background-color: #eb6100;
 }
 
 a.btn--orange:hover {
   color: #fff;
-  background:rgba(199, 111, 28, 0.8);
+  background: #f56500;
 }
 
 a.btn--shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  margin-top: 15px;
 }
 
 a.btn--circle {
-  border-radius: 25px;
-  line-height: 50px;
-  width: 200px;
-  height: 50px;
+  border-radius: ２５%;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
   padding: 0;
 }

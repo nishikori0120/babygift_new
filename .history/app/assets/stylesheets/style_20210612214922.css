@@ -643,12 +643,9 @@ ul li {
     box-shadow: 12px 8px 10px 4px rgba(179, 135, 16, 0.2);
   }
 
-  .comfimation{
-    margin: 0 auto;
-    width: 750px;
-  }
-
   .container{
+    width: 750px;
+    text-align: center;
   }
 
 }
