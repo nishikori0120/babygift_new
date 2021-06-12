@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_one :card, dependent: :destroy
   has_many :orders
 
-  with_options presence: true , format: { with: /\A[ァ-ヶー－]+\z/, message: 'に全角カタカナを使用してください' } do
+  with_options presence: true , format: { with: /\A[ァ-ヶー－]+\z/ } do
     validates :first_name_kana
     validates :last_name_kana
   end
@@ -18,11 +18,11 @@ class User < ApplicationRecord
     validates :last_name
   end
 
-  validates :tel, presence: true, format: {with: /\A\d{10,11}\z/, message: '半角数字でご入力ください'}
+  validates :tel, format: {with: /\A\d{10,11}\z/}
 
-  # include Katakana
-  # before_validation do
-  #   self.first_name_kana = change_kana(first_name_kana)
-  # end
+  include Katakana
+  before_validation do
+    self.first_name_kana = change_kana(first_name_kana)
+  end
 
 end

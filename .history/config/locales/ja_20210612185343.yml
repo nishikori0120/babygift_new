@@ -1,0 +1,19 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       first_name: 姓
+       first_name_kana: 姓（カタカナ）
+       last_name: 名
+       last_name_kana: 名（カタカナ）
+       tel: 電話番号
+     address:
+       postcode: 郵便番号
+       prefecture: 都道府県
+       city: 市町村
+       street: 番地
+     order:
+      k_name: おなまえ（漢字）
+      r_name: おなまえ（ローマ字）
+      birthday: お誕生日
+      height: 誕生時の身長

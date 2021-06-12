@@ -3,13 +3,11 @@ class Address < ApplicationRecord
   belongs_to :order, optional: true
 
   with_options presence: true do
+    validates :postcode
     validates :city
     validates :street
     validates :prefecture
   end
-
-  validates :postcode, presence: true, format: { with: /\A\d{3}[-]\d{4}$|^\d{3}[-]\d{2}$|^\d{3}$|^\d{5}$|^\d{7}\z/ }
-
 
   include JpPrefecture
   jp_prefecture :prefecture, method_name: :pref

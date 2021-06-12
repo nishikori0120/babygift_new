@@ -9,7 +9,17 @@ class Address < ApplicationRecord
   end
 
   validates :postcode, presence: true, format: { with: /\A\d{3}[-]\d{4}$|^\d{3}[-]\d{2}$|^\d{3}$|^\d{5}$|^\d{7}\z/ }
+  # with_options presence: true , format: { with: /\A[ァ-ヶー－]+\z/, message: 'に全角カタカナを使用してください' } do
+  #   validates :first_name_kana
+  #   validates :last_name_kana
+  # end
 
+  with_options presence: true do
+    validates :prefecture
+    validates :last_name
+  end
+
+  # validates :tel, format: {with: /\A\d{10,11}\z/}
 
   include JpPrefecture
   jp_prefecture :prefecture, method_name: :pref

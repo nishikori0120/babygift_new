@@ -5,7 +5,7 @@
   <div class="baby-form">
     <div class="baby-data">
       <%= form_with(model: @order, url: orders_path, local: true) do |f| %>
-      <%= render 'layouts/error', model: f.object %>
+      <%= render "devise/shared/error_messages", resource: @order %>
 
       <div class="field">
         <%= f.label :k_name, 'おなまえ（漢字）', class: 'form-label' %><br />
@@ -18,7 +18,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :birthday, 'お誕生日', class: 'form-label' %><br />
+        <%= f.label :birthday, '生まれた日', class: 'form-label' %><br />
         <%= f.date_field :birthday, placeholder: "こちらをクリック" %>
       </div>
 
