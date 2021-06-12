@@ -13,7 +13,4 @@ ja:
        city: 市町村
        street: 番地
      order:
-      k_name: おなまえ（漢字）
-      r_name: おなまえ（ローマ字）
-      birthday: お誕生日
-      height: 誕生時の身長
+      k_name:

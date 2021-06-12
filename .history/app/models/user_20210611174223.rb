@@ -18,7 +18,7 @@ class User < ApplicationRecord
     validates :last_name
   end
 
-  validates :tel, presence: true, format: {with: /\A\d{10,11}\z/, message: '半角数字でご入力ください'}
+  validates :tel, format: {with: /\A\d{10,11}\z/}
 
   # include Katakana
   # before_validation do
