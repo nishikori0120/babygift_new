@@ -634,7 +634,7 @@ ul li {
 
   .discription{
     width:780px;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .item-image{
@@ -724,7 +724,7 @@ body {
   letter-spacing: 0.15em;
   font-size: 16px;
   color: #666;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
@@ -1085,7 +1085,7 @@ form input[type="submit"]:hover {
 .container h3 {
   margin: 0 0 20px;
   text-align: center;
-  font-weight: normal;
+  /* font-weight: normal; */
   font-size: 20px;
   color: #666;
 }
