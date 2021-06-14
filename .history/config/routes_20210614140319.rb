@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, controllers: {
+    sessions: 'admin_users/sessions'
+  }
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'cards/new'
   get 'cards/create'
   devise_for :users, controllers: {
@@ -10,7 +14,11 @@ Rails.application.routes.draw do
     # patch 'addresses', to: 'users/registrations#address_update'
   end
   root to: 'orders#index'
-  resources :orders, only: [:new, :create,]
+  resources :orders, only: [:new, :create]
+  get 'orders/select_address', to: 'orders#select_address'
+  post 'order/add_address', to: 'orders#add_address'
+  post 'orders/comfimation', to: 'orders#add_address'
+  get 'orders/comfimation', to: 'orders#comfimation'
   resources :users, only: [:show, :edit]
   resources :cards, only: [:new, :create]
 end
