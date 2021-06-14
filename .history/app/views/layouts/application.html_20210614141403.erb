@@ -7,10 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%# <script src="https://js.stripe.com/v3/", type="text/javascript"></script> %>
+    <script src="https://js.stripe.com/v3"></script>
+    <%= favicon_link_tag('favicon.ico') %>
   </head>
 
   <body>
     <%= yield %>
+
+       <ul>
+<% if admin_user_signed_in? %>
+      <li><%= current_admin_user.email %></li>
+      <li><%= link_to t('log_out'), destroy_admin_user_session_path, method: :delete %></li>
+<% else %>
+      <%# <li><%= link_to t('log_in'), new_admin_user_session_path %></li> %>
+<% end %>
+    </ul>
+    <hr/>
   </body>
 </html>
