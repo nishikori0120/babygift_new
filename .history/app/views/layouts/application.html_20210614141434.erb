@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BabygiftNew</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://js.stripe.com/v3"></script>
+    <%= favicon_link_tag('favicon.ico') %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+
+<% if admin_user_signed_in? %>
+      <%= current_admin_user.email %>
+      <%= link_to t('log_out'), destroy_admin_user_session_path, method: :delete %>
+<% end %>
+
+    <hr/>
+  </body>
+</html>

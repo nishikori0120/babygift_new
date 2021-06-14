@@ -36,8 +36,7 @@ ja:
         created_at: "作成日"
         updated_at: "更新日"
     models:
-      user: "ユーザー"
-      admin_user: "管理者"
+      user: ユーザー
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
