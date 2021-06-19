@@ -41,6 +41,7 @@ class OrdersController < ApplicationController
       @new_address = Address.new(session["address_data"]["new_address"])
     end
     @order = Order.new(session["order_data"]["order"])
+    NeworderMailer.send_mail.deliver_now
   end
 
   private

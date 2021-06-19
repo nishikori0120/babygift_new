@@ -27,9 +27,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
      end
     @user.build_address(@address.attributes)
     @user.save
+    # NeworderMailer.send_mail.deliver_now
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
-    redirect_to new_card_path
+    redirect_to root_path
   end
 
   private

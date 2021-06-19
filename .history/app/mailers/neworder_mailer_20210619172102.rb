@@ -7,7 +7,8 @@ class NeworderMailer < ApplicationMailer
   #
   def send_mail
 
-    mail to: "yu.nishikori@di-v.co.jp",
+    binding.pry
+    mail to: @user.email,
     cc: "nisikori0120@i.softbank.jp",
     subject: "【babyGift】ご注文を承りました。内容をご確認くださいませ。"
   end

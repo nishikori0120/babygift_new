@@ -6,8 +6,10 @@ class NeworderMailer < ApplicationMailer
   #   en.neworder_mailer.send_mail.subject
   #
   def send_mail
+    @user = params
+    @order = @user.order.last
 
-    mail to: "yu.nishikori@di-v.co.jp",
+    mail to: @user.email,
     cc: "nisikori0120@i.softbank.jp",
     subject: "【babyGift】ご注文を承りました。内容をご確認くださいませ。"
   end
