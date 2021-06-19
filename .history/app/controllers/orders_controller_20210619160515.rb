@@ -4,26 +4,35 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.new
+    if user_signed_in?
+      @order = Order.new
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   def create
-    @user = User.find(current_user.id)
-    @address = @user.address
     @order = Order.new(order_params)
     unless @order.valid?
       render :new and return
     end
     session["order_data"] = {order: @order.attributes}
     session["user_data"] = {user: current_user.attributes}
+    redirect_to orders_select_address_path
+  end
+
+  def select_address
+    @user = User.find(current_user.id)
+    @address = @user.address
   end
 
   def add_address
-    @new_address = Address.new(address_params)
-    unless @new_address.valid?
+    @address = Address.new(address_params)
+    unless @address.valid?
       render :select_address and return
     end
-    session["address_data"] = {new_address: @new_address.attributes}
+    session["address_data"] = {new_address: @address.attributes}
+    redirect_to orders_comfimation_path
   end
 
   def comfimation
@@ -32,7 +41,7 @@ class OrdersController < ApplicationController
     @new_address = Address.new(session["address_data"]["new_address"])
     end
     @order = Order.new(session["order_data"]["order"])
-    render '/app/views/cards/new'
+    NoticeMailer.greeting.deliver_now
   end
 
   private
@@ -42,7 +51,7 @@ class OrdersController < ApplicationController
   end
 
   def address_params
-    params.permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
+    params.require(:address).permit(:postcode,:prefecture,:city,:street,:building,:first_name, :first_name_kana, :last_name, :last_name_kana, :tel).merge(user_id: current_user.id)
   end
 
 end
