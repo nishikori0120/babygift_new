@@ -8,6 +8,6 @@ class NoticeMailer < ApplicationMailer
   def greeting
     @greeting = "Hi"
 
-    mail to: "yu.nishikori@di-v.co.jp"
+    mail to: "to@example.org"
   end
 end
