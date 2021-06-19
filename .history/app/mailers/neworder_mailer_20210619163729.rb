@@ -8,8 +8,6 @@ class NeworderMailer < ApplicationMailer
   def send_mail
     @greeting = "Hi"
 
-    mail to: "yu.nishikori@di-v.co.jp"
-    cc: "nisikori0120@i.softbank.jp"
-    subject: "【babyGift】ご注文を承りました。内容をご確認くださいませ。"
+    mail to: "to@example.org"
   end
 end

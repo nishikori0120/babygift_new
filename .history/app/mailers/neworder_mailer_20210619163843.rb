@@ -10,6 +10,6 @@ class NeworderMailer < ApplicationMailer
 
     mail to: "yu.nishikori@di-v.co.jp"
     cc: "nisikori0120@i.softbank.jp"
-    subject: "【babyGift】ご注文を承りました。内容をご確認くださいませ。"
+    subject: ""
   end
 end
