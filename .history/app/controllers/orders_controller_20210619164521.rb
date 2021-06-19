@@ -36,9 +36,10 @@ class OrdersController < ApplicationController
   end
 
   def comfimation
+    .greeting.deliver_now
     @address = current_user.address
     if session["address_data"].present?
-      @new_address = Address.new(session["address_data"]["new_address"])
+    @new_address = Address.new(session["address_data"]["new_address"])
     end
     @order = Order.new(session["order_data"]["order"])
   end

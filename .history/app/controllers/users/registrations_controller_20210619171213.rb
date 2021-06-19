@@ -19,6 +19,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
     render :create_address
   end
 
+  def create_address
+    @user = User.new(session["devise.regist_data"]["user"])
+    @address = Address.new(address_params)
+     unless @address.valid?
+       render :create_address and return
+     end
+    @user.build_address(@address.attributes)
+    @user.save
+    NeworderMailer.send_mail.deliver_now
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+    redirect_to root_path
+  end
+
+  private
+
+  def address_params
+    params.require(:address).permit(:postcode,:prefecture,:city,:street,:building).merge(first_name: @user.first_name, first_name_kana: @user.first_name_kana, last_name: @user.last_name, last_name_kana: @user.last_name_kana, tel: @user.tel)
+  end
   # GET /resource/edit
   # def edit
   #   super
