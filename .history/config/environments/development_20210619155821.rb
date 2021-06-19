@@ -41,8 +41,8 @@ Rails.application.configure do
     :port => '587',
     :domain => 'smtp.gmail.com',
     :authentication => 'plain',
-    :user_name => 'nishikori.web@gmail.com',
-    :password => 'rcsvtzbwegbjtqtj'
+    :user_name => '二段階認証設定、アプリケーションパスワードを取得したアカウントのメールアドレス',
+    :password => 'アプリケーションパスワード(表示された時は4文字で区切られていたがスペース入れず連続して記載)'
   }
 
 
