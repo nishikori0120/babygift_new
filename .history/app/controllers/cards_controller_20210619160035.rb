@@ -28,6 +28,7 @@ class CardsController < ApplicationController
     session["order_data"]["order"].clear
     session["user_data"]["user"].clear
     redirect_to root_path
+    NoticeMailer.greeting.deliver_now
   end
 
 end
