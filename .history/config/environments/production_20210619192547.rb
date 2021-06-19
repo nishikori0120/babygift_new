@@ -69,7 +69,8 @@ Rails.application.configure do
     :address => ENV['MAILGUN_SMTP_SERVER'],
     :user_name => ENV['MAILGUN_SMTP_LOGIN'],
      :password => ENV['MAILGUN_SMTP_PASSWORD'],
-     :domain => 'babygiftnew-01.herokuapp.com',
+      :host = 'babygiftnew-01.herokuapp.com'
+     :domain => '',
      :authentication => :plain,
     }
   config.action_mailer.delivery_method = :smtp
