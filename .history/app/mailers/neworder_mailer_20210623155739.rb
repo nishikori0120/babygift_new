@@ -1,11 +1,6 @@
 class NeworderMailer < ApplicationMailer
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.neworder_mailer.send_mail.subject
-  #
   default from:     "babyGift",  #差出人の名前
+
   def send_mail
     mail to: "yu.nishikori@di-v.co.jp",
     cc: "nisikori0120@i.softbank.jp",

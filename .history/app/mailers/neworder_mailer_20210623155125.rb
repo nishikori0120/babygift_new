@@ -5,7 +5,6 @@ class NeworderMailer < ApplicationMailer
   #
   #   en.neworder_mailer.send_mail.subject
   #
-  default from:     "babyGift",  #差出人の名前
   def send_mail
     mail to: "yu.nishikori@di-v.co.jp",
     cc: "nisikori0120@i.softbank.jp",
