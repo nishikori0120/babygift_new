@@ -15,7 +15,8 @@ function add_address(){
       // document.getElementById("add_address").textContent = "戻る"
       form.setAttribute("style", "display:block;")
       selectAddress.setAttribute("style", "display:none;")
-      next.setAttribute("style", "display:none;")
+      next.removeAttribute("style", "display:none;")
+
     }
   })
 }
