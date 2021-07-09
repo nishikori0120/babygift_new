@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     session["user_data"] = {user: current_user.attributes}
     redirect_to orders_select_address_path
 
-    NeworderMailer.send_mail.deliver_now
+    # NeworderMailer.send_mail.deliver_now
   end
 
   def select_address

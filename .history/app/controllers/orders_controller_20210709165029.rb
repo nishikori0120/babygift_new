@@ -4,7 +4,11 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.new
+    if user_signed_in?
+      @order = Order.new
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   def create
@@ -15,6 +19,8 @@ class OrdersController < ApplicationController
     session["order_data"] = {order: @order.attributes}
     session["user_data"] = {user: current_user.attributes}
     redirect_to orders_select_address_path
+
+    # NeworderMailer.send_mail.deliver_now
   end
 
   def select_address
@@ -28,13 +34,13 @@ class OrdersController < ApplicationController
       render :select_address and return
     end
     session["address_data"] = {new_address: @address.attributes}
-    # redirect_to order_comfimation_path
+    redirect_to orders_comfimation_path
   end
 
   def comfimation
     @address = current_user.address
     if session["address_data"].present?
-    @new_address = Address.new(session["address_data"]["new_address"])
+      @new_address = Address.new(session["address_data"]["new_address"])
     end
     @order = Order.new(session["order_data"]["order"])
   end
