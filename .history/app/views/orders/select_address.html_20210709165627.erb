@@ -12,15 +12,15 @@
           <li><%= @address.building %></li>
         </ul>
       </div>
+    </div>
     <div class="new_address" id="new_address">
       <span class="add_address"  id="add_address">
         【違う配送先を指定】
       <svg width="18" height="13" fill="cadetblue" fill-rule="evenodd" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.51,11.3H12.7v-5a.7.7,0,0,0-1.4,0v5h-5a.7.7,0,0,0,0,1.4h5v4.81a.7.7,0,0,0,1.4,0V12.7h4.81a.7.7,0,0,0,0-1.4Z"></path><path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18.6A8.6,8.6,0,1,1,20.6,12,8.61,8.61,0,0,1,12,20.6Z"></path></svg></span>
     </div>
-    </div>
 
     <div class="address_form hidden" id="address_form" >
-      <%= form_with model: @new_address, url: orders_comfimation_path, id: "form", local: true do |f| %>
+      <%= form_with model: Address.new, url: orders_comfimation_path, id: "form", local: true do |f| %>
 
       <div class="field">
         <%= f.label :お名前 %><br />
@@ -64,14 +64,12 @@
         <%= f.text_field :building, autocomplete: 'address_building', id:'user_address_building' %>
       </div>
 
-      <div class="actions">
+      <div class="btn btn--orange btn--circle btn--circle-a btn--shadow">
         <%= f.submit 'こちらの配送先に送る', id: "submit" %>
       </div>
       <% end %>
     </div>
 
-    <div class="btn" id="next">
-      <%= link_to '次へ進む', orders_comfimation_path %>
-    </div>
+    <a href="/orders/comfimation" class="btn btn--orange btn--circle btn--circle-a btn--shadow">次へ進む</a>
 
 </div>
